@@ -1,2 +1,2 @@
-# UW Gamedev Club Art Tutorial Project
+# UW Gamedev Club TeachingProject
 For UW Students' learning
