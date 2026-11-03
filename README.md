@@ -24,4 +24,5 @@ Your project should be in your folder!
 
 ## Step 3: Open the project in Unity
 
-
+Download and install Unity Hub: [Download Instructions](https://docs.unity.com/en-us/hub/install-hub)
+From here
