@@ -15,7 +15,7 @@ public class Dash_Example : MonoBehaviour
     }
 
     private void OnEnable()
-    {
+    {//
         if (dashAction != null)
             dashAction.action.Enable();
         if (moveAction != null)
@@ -35,9 +35,10 @@ public class Dash_Example : MonoBehaviour
     private void Update()
     {
         if (lastDash + cooldown > Time.time) return; // Dont dash on cooldown
-
+        print("Dash!" + dashAction.action.ReadValue<float>());
         if (dashAction.action.ReadValue<float>() == 1)
         {
+            print("Gigglefucker" + moveAction.action.ReadValue<Vector2>());
             Vector2 target = moveAction.action.ReadValue<Vector2>();
             if (target != Vector2.zero)
             {

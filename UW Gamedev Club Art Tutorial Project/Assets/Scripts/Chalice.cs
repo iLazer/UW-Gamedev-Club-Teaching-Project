@@ -5,7 +5,6 @@ using UnityEngine.Events;
 public class Chalice : MonoBehaviour
 {
     [SerializeField] Transform match;
-    public UnityEvent onDie;
     public float speed = 100f;
     public float clampDistance = 0.1f;
     public static Chalice Instance { get; private set; }
@@ -29,19 +28,5 @@ public class Chalice : MonoBehaviour
         }
         // make this force-based.
         rb.AddForce(direction.normalized * speed * Time.fixedDeltaTime, ForceMode2D.Force);
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.TryGetComponent(out ChaliceKiller monster))
-        {
-            onDie.Invoke();
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.TryGetComponent(out ChaliceKiller monster))
-        {
-            onDie.Invoke();
-        }
     }
 }

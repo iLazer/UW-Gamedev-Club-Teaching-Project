@@ -10,14 +10,16 @@ public class Monster : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-    // Update is called once per frame
     void FixedUpdate()
     { 
-        Vector2 direction = Chalice.Instance.transform.position - transform.position;
-        // force-based.
-        rb.AddForce(direction.normalized * speed * Time.fixedDeltaTime, ForceMode2D.Force);
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, angle - 90));
+        if (EnemyTarget.Instance != null)
+        {
+            Vector2 direction = EnemyTarget.Instance.transform.position - transform.position;
+            // force-based.
+            rb.AddForce(direction.normalized * speed * Time.fixedDeltaTime, ForceMode2D.Force);
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, angle - 90));
+        }
     }
 
     public void ApplyKnockback(Vector2 force)

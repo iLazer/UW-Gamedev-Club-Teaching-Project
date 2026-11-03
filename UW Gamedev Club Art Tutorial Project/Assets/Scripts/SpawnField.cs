@@ -10,6 +10,10 @@ public class SpawnField : MonoBehaviour
     }
     public Vector2 getRandomPos()
     {
+        if (boxCollider == null)
+        {
+            boxCollider = GetComponent<BoxCollider2D>();
+        }
         Vector2 center = boxCollider.bounds.center;
         Vector2 extents = boxCollider.bounds.extents;
         float randomX = Random.Range(center.x - extents.x, center.x + extents.x);

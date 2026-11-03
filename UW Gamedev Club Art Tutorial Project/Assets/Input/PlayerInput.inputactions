@@ -16,7 +16,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Dash",
+                    "name": "Dash / Pause",
                     "type": "Button",
                     "id": "3499222b-cb4f-4135-a6de-37551670d7a2",
                     "expectedControlType": "",
@@ -88,7 +88,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dash",
+                    "action": "Dash / Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
