@@ -22,7 +22,13 @@ Now, in the terminal, type:
 
 Your project should be in your folder!
 
-## Step 3: Open the project in Unity
+## Step 3: Register the Project in Unity Hub
 
-Download and install Unity Hub: [Download Instructions](https://docs.unity.com/en-us/hub/install-hub)
-From here
+From here, open Unity Hub on your desktop. (See [installation](https://docs.unity.com/en-us/hub/install-hub))
+On the top right of Unity Hub, hit Add => Add project from disk. When explorer opens, open the project from your files.
+You should now see the project name in your projects!
+
+## Step 4: Open the Unity Project
+
+Now, Try to open the project, which will require you to install the correct Unity version through the Unity Hub. (Should be 6000.0.85f2)
+If you can open the project: Congratulations! you can now go along with the lesson O:
